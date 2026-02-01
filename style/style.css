@@ -148,7 +148,7 @@ body {
     transform: translate(-50%,-50%);
     border-radius: 4px;
     transition: all .3s ease-in-out;
-    
+    min-width: 350px;
     
 }
 
