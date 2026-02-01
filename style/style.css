@@ -63,6 +63,8 @@ body {
   flex-direction: column;
   gap: 14px;
   margin-top: 14px;
+  overflow-y: auto;
+  max-height: 800px;
 }
 .task-list .task {
   display: flex;
@@ -164,6 +166,7 @@ body {
     right: 30px;
     font-size: 1.3rem;
     top: 15px;
+    cursor: pointer;
 }
 
 #modal .form{
@@ -199,6 +202,25 @@ body {
   .container {
     max-width: 800px;
   }
+
+  #modal{
+
+    min-width: 540px;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* IE / old Edge */
+* {
+  -ms-overflow-style: none;
 }
 
 @media (min-width: 1024px) {
@@ -222,5 +244,10 @@ body {
 
     font-size: 32px;
     padding: 10px 16px;
+  }
+
+  #modal{
+
+    min-width: 840px;
   }
 }
