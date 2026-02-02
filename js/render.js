@@ -1,3 +1,5 @@
+
+import { Task } from "./addtask.js";
 import { GetTask } from "./storage.js";
 import { template } from "./task.js";
 
@@ -12,13 +14,17 @@ export function render(){
         let TaskData = GetTask();
 
 
-       TaskData.forEach((task) => {
+       TaskData.forEach((task,index) => {
         
          
-       taskTable.innerHTML +=  template(task);
+       taskTable.innerHTML +=  template(task,index);
        
 
+     
+     
            
        });
+
+    
 
 }

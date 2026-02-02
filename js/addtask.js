@@ -1,8 +1,9 @@
+import { render } from "./render.js";
 import { GetTask, SetTask } from "./storage.js";
 
 
 
-let Task = GetTask();
+ let Task = GetTask();
 
 
 
@@ -16,7 +17,7 @@ export function obj(task){
 
   Task.push(taskObj);
 
-  
+
 
    
 }

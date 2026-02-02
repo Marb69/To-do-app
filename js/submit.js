@@ -1,5 +1,6 @@
 
 import { obj } from "./addtask.js";
+import { render } from "./render.js";
 import { GetTask, SetTask} from "./storage.js";
 
 export function submit() {
@@ -15,7 +16,7 @@ export function submit() {
       
     SetTask();
 
- 
+    render();
   });
 
   

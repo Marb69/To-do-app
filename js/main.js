@@ -7,7 +7,7 @@ import { submit } from "./submit.js";
 document.addEventListener("DOMContentLoaded", () => {
   modal();
   submit();
-
+  render();
   
 
 });
