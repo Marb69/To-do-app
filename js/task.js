@@ -1,12 +1,12 @@
 import { deletetask } from "./deletetask.js";
-
+import { checkmark } from "./checkmark.js";
 export function template(taskname,index) {
 
 
 return `<div class="task">
 
                    <label class="mark-done">
-                     <input type="checkbox" name="" id="checkbox">
+                     <input type="checkbox" name="" ">
                         <span class="checkmark"></span>
                    </label>
                     <div class="task-label">

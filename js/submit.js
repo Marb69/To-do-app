@@ -12,11 +12,23 @@ export function submit() {
   AddBtn.addEventListener("click", () => {
     let InputValue = TaskInput.value;
 
+
+    if(InputValue == '' ){
+
+      const ok =   alert('fill the input field');
+
+    }else{
+
     obj(InputValue);
-      
+    TaskInput.value = '';
+    
     SetTask();
 
     render();
+
+    }
+
+  
   });
 
   

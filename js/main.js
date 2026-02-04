@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   modal();
   submit();
   render();
+ console.log(GetTask())
   
 
 });

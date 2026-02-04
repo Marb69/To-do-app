@@ -12,11 +12,11 @@ export function obj(task){
     let taskObj = {
 
         Taskname:task,
-        done:false
+        done:true
     }
 
   Task.push(taskObj);
-
+  
 
 
    
