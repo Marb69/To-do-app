@@ -5,10 +5,6 @@ export function template(taskname,index) {
 
 return `<div class="task">
 
-                   <label class="mark-done">
-                     <input type="checkbox" name="" ">
-                        <span class="checkmark"></span>
-                   </label>
                     <div class="task-label">
                          <span id="task-title">${taskname.Taskname}</span>
                           
