@@ -1,16 +1,13 @@
-import { Task } from "./addtask.js";
 
-export function SetTask(){
+export let TaskData = [];
 
-    localStorage.setItem('task',JSON.stringify(Task));
+export function SetItem(){
+
+   localStorage.setItem("task",JSON.stringify(TaskData));
 }
 
 
-export function GetTask(){
+export function GetItem(){
 
-    
-    return JSON.parse(localStorage.getItem('task')) || [];
-
+   return TaskData = JSON.parse(localStorage.getItem("task")) || [];
 }
-
-

@@ -1,30 +1,17 @@
+import { deleteTask } from "./delete.js";
+import { GetItem, TaskData } from "./storage.js";
 
-import { Task } from "./addtask.js";
-import { GetTask } from "./storage.js";
-import { template } from "./task.js";
+export function render() {
+  const TaskWrapper = document.querySelector(".task-list");
 
-export function render(){
+  TaskWrapper.innerHTML = " ";
 
-    const taskTable =document.querySelector('.task-list');
-
-    taskTable.innerHTML = '';
-
-  
-
-        let TaskData = GetTask();
-
-
-       TaskData.forEach((task,index) => {
-        
-         
-       taskTable.innerHTML +=  template(task,index);
-       
-
-     
-     
-           
-       });
-
-    
-
+  GetItem().forEach((item,index) => {
+   
+    TaskWrapper.innerHTML += `<div class="task">
+                    <span id="task-title">${item.task}</span>
+                    <i class="fa-solid fa-trash" id="delete-icon" onclick="deleteTask(${index})"></i>
+                    
+                </div>`;
+  });
 }
