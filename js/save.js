@@ -8,6 +8,8 @@ import { GetItem, SetItem } from "./storage.js";
 
 export function save(){
     
+
+
 SaveBtn.addEventListener('click',()=>{
 
     
@@ -19,8 +21,9 @@ SaveBtn.addEventListener('click',()=>{
     }else{
 
           addtask(InputValue);
-          SetItem();
           render();
+        
+          
     }
 
  

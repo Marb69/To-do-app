@@ -113,7 +113,7 @@ body {
   align-items: center;
 }
 
-#delete-icon {
+.delete-icon {
   font-size: 30px;
   color: #b76767;
   cursor: pointer;

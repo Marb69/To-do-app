@@ -1,17 +1,24 @@
 import { deleteTask } from "./delete.js";
-import { GetItem, TaskData } from "./storage.js";
+import { TaskWrapper } from "./main.js";
+import { GetItem } from "./storage.js";
+
 
 export function render() {
-  const TaskWrapper = document.querySelector(".task-list");
 
-  TaskWrapper.innerHTML = " ";
 
-  GetItem().forEach((item,index) => {
+TaskWrapper.innerHTML = " ";
+
+ GetItem().forEach((item) => {
    
     TaskWrapper.innerHTML += `<div class="task">
                     <span id="task-title">${item.task}</span>
-                    <i class="fa-solid fa-trash" id="delete-icon" onclick="deleteTask(${index})"></i>
+                    <i class="fa-solid fa-trash delete-icon" data-id="${item.id} "></i>
                     
                 </div>`;
+
+
+             
+               
   });
+
 }

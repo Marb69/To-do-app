@@ -1,17 +1,38 @@
-import { deleteBtn } from "./main.js";
+import { TaskWrapper } from "./main.js";
 import { render } from "./render.js";
-import { GetItem, SetItem, TaskData } from "./storage.js";
+import { GetItem, SetItem } from "./storage.js";
 
-export function deleteTask(index){
-
-      console.log(GetItem())
-  
+export function deleteTask(){
 
 
-            TaskData.splice(index,0);
 
-            SetItem();
-   render();
+        TaskWrapper.addEventListener("click", (e) => {
+
+        let dataTask = GetItem();
+           
+    if (e.target.classList.contains("delete-icon")){
+
+ 
+
+       let id = Number(e.target.dataset.id);
+
+      let update = dataTask.filter(item=> item.id !== id);
+
+
+
+
+      SetItem(update);
+      
+      render();
+    };
+
+ 
+     
+    
+
+
+});
+    
 
  
 

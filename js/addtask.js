@@ -1,12 +1,18 @@
 import { task } from "./Interface.js";
-import { SetItem, TaskData } from "./storage.js";
+import { render } from "./render.js";
+import {  GetItem, SetItem } from "./storage.js";
 
+    
+let updated = GetItem()
 
 export function addtask(Task){
 
 
-    TaskData.push(new task(Task));
 
+    updated.push(new task(Task));
+
+    SetItem(updated);
+    console.log(updated);
 
 
 }
