@@ -64,7 +64,8 @@ body {
   gap: 14px;
   margin-top: 14px;
   overflow-y: auto;
-  max-height: 800px;
+
+  max-height: 600px;
 }
 .task-list .task {
   display: flex;

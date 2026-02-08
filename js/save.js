@@ -22,6 +22,8 @@ export function save(){
 
         SetItem();
         render();
+
+        AddTask.value = '';
     }
 })
 }
