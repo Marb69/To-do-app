@@ -1,31 +1,27 @@
-import { addtask } from "./addtask.js";
-import { AddTask, SaveBtn, TaskInput } from "./main.js";
+
+import { task } from "./Interface.js";
+import { AddTask, SaveBtn } from "./main.js";
 import { render } from "./render.js";
-import { GetItem, SetItem } from "./storage.js";
-
-
+import { data, SetItem } from "./storage.js";
 
 
 export function save(){
-    
+
+    SaveBtn.addEventListener('click',()=>{
 
 
-SaveBtn.addEventListener('click',()=>{
-
-    
     let InputValue = AddTask.value;
 
     if(InputValue == ''){
 
-        alert('Please Fill the Input Field');
+        alert('Please fill the input Field')
     }else{
 
-          addtask(InputValue);
-          render();
-        
-          
-    }
+       
+        data.push(new task(InputValue));
 
- 
+        SetItem();
+        render();
+    }
 })
 }
